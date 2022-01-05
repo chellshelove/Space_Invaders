@@ -118,7 +118,6 @@ class Player(Ship):
         pygame.draw.rect(window, (255, 0, 0), (self.x, self.y + self.ship_img.get_height() + 10, self.ship_img.get_width(), 10))
         pygame.draw.rect(window, (0, 255, 0), (self.x, self.y + self.ship_img.get_height() + 10, self.ship_img.get_width() * (self.health / self.max_health), 10))
 
-
 class Enemy(Ship):
     COLOR_MAP = {
                 "red": (RED_SPACE_SHIP, RED_LASER),
@@ -152,7 +151,6 @@ def main():
     main_font = pygame.font.SysFont("comicsans", 50)
     lost_font = pygame.font.SysFont("comicsans", 60)
 
-
     enemies = []
     wave_length = 5
     enemy_vel = 1
@@ -182,7 +180,7 @@ def main():
         player.draw(WINDOW)
 
         if lost:
-            lost_label = lost_font.render("You Lost The Game !", 1, (255, 255, 255))
+            lost_label = lost_font.render("You Lost The Game !!", 1, (255, 255, 255))
             WINDOW.blit(lost_label, (WIDTH / 2 - lost_label.get_width() / 2, 350))
 
         pygame.display.update()
@@ -200,7 +198,6 @@ def main():
                 run = False
             else:
                 continue
-
 
         if len(enemies) == 0:
             level += 1
