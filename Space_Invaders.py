@@ -220,7 +220,7 @@ def main():
         if keys[pygame.K_DOWN] and player.y + player_vel + player.get_height() + 15 < HEIGHT: # down
             player.y += player_vel
         if keys[pygame.K_SPACE]:
-            player.shoot()
+            player.shoot() # shoot the laser bullets
 
         for enemy in enemies[:]:
             enemy.move(enemy_vel)
@@ -239,6 +239,7 @@ def main():
 
         player.move_lasers(-laser_vel, enemies)
 
+# main menu window 
 def main_menu():
     title_font = pygame.font.SysFont("comicsans", 45)
     run = True
