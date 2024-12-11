@@ -260,3 +260,5 @@ def main_menu():
 main_menu()
 
 print(pygame.__version__)
+
+# You can now run the code and enjoy the game
